@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<ul class="headermenu" [ngClass]="{ 'dark-theme': currentTheme === 'dark' }">
+<ul class="headerMenu" [ngClass]="{ 'dark-theme': currentTheme === 'dark' }">
   <li *ngFor="let link of pHeaderService.menuLinksArray">
     <a [href]="link.link">{{ link.title }}</a>
   </li>
+  <button
+    class="themeSwitcher"
+    [ngClass]="{ 'dark-theme': currentTheme === 'dark' }"
+    (click)="
+      pThemeService.changeTheme(currentTheme === 'dark' ? 'light' : 'dark')
+    "
+  >
+    {{
+      currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"
+    }}
+  </button>
 </ul>
-
-<button (click)="pThemeService.changeTheme('dark')">Change theme!</button>
