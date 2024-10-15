@@ -1,5 +1,11 @@
 @import "variables";
 
 .headermenu {
+  color: $primary-color;
   background-color: $secondary-color;
+
+  &.dark-theme {
+    color: $dark-primary-color;
+    background-color: $dark-secondary-color;
+  }
 }
