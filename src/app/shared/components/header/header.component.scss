@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 5px;
 
   /* Light theme */
   color: $primary-color;
@@ -41,3 +42,15 @@
     color: $primary-color;
   }
 }
+
+/* Start Media queries */
+
+/* Desktop */
+@media (min-width: 992px) {
+  .headerMenu {
+    flex-direction: row;
+    padding: 10px;
+  }
+}
+
+/* End Media queries */
